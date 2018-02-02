@@ -1,4 +1,4 @@
-# 由`setTimeout`和`setImmediate`执行的随机性窥探Node的事件循环机制
+# 由`setTimeout`和`setImmediate`执行顺序的随机性窥探Node的事件循环机制
 
 ## 问题引入
 
