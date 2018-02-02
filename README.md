@@ -11,3 +11,5 @@
 **[理解事件冒泡和事件捕获](./理解事件冒泡和事件捕获.md)**
 
 **[HTTP不同版本主要特性的对比](./HTTP不同版本主要特性的对比.md)**
+
+**[由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制.md](./由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制.md.md)**
