@@ -12,4 +12,4 @@
 
 **[HTTP不同版本主要特性的对比](./HTTP不同版本主要特性的对比.md)**
 
-**[由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制.md](./由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制.md)**
+**[由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制](./由setTimeout和setImmediate执行的随机性窥探Node的事件循环机制.md)**
