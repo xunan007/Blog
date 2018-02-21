@@ -218,7 +218,7 @@ export function queueWatcher (watcher: Watcher) {
 
 另外，关于`waiting`变量，这是很重要的一个标志位，它保证`flushSchedulerQueue`回调只允许被置入`callbacks`一次。
 
-**所以，也就是说`DOM`确实是异步更新，但是具体是在下一个Tick更新还是在当前Tick执行`microTask`的时候更新，具体要看`nextTcik`的实现方式，也就是具体跑的是`Promise/MutationObserver`还是`setTimeout`。**
+**所以，也就是说`DOM`确实是异步更新，但是具体是在下一个`Tick`更新还是在当前`Tick`执行`microTask`的时候更新，具体要看`nextTcik`的实现方式，也就是具体跑的是`Promise/MutationObserver`还是`setTimeout`。**
 
 附：[`nextTick`源码带注释]((https://github.com/answershuto/learnVue/blob/master/docs/Vue.js%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0DOM%E7%AD%96%E7%95%A5%E5%8F%8AnextTick.MarkDown#nexttick))，有兴趣可以观摩一下。
 
