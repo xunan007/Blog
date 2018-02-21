@@ -358,7 +358,7 @@ handleClick() {
 
 ![](http://oxybu3xjd.bkt.clouddn.com/18-2-21/50449591.jpg)
 
-其大概的意思就是：在`Vue 2.4`之前的版本中，`nextTick`几乎都是基于`microTask`实现的（具体可以看文章`nextTick`一节），但是由于`microTask`的执行优先级非常高，在某些场景之下它甚至要比事件冒泡还要快，就会导致一些诡异的问题；但是如果全部都改成`macroTask`，对一些有重绘和动画的场景也会有性能的影响。所以最终`nextTick`采取的策略是默认走`microTask`，对于一些`DOM`的交互事件，如`v-on`绑定的事件回调处理函数的处理，会强制走`macroTask`。
+其大概的意思就是：在`Vue 2.4`之前的版本中，`nextTick`几乎都是基于`microTask`实现的（具体可以看文章`nextTick`一节），但是由于`microTask`的执行优先级非常高，在某些场景之下它甚至要比事件冒泡还要快，就会导致一些诡异的问题；但是如果全部都改成`macroTask`，对一些有重绘和动画的场景也会有性能的影响。**所以最终`nextTick`采取的策略是默认走`microTask`，对于一些`DOM`的交互事件，如`v-on`绑定的事件回调处理函数的处理，会强制走`macroTask`。**
 
 具体做法就是，在`Vue`执行绑定的`DOM`事件时，默认会给回调的`handler`函数调用`withMacroTask`方法做一层包装，它保证整个回调函数的执行过程中，遇到数据状态的改变，这些改变而导致的视图更新（`DOM`更新）的任务都会被推到`macroTask`。
 
