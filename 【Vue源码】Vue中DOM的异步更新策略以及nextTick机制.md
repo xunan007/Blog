@@ -1,6 +1,6 @@
 # 【Vue源码】Vue中DOM的异步更新策略以及nextTick机制
 
-> 本篇文章主要是对`Vue`中的`DOM`异步更新策略和`nextTick`机制的解析，需要有一定的`Vue`使用经验和熟悉掌握JavaScript事件循环模型。
+> 本篇文章主要是对`Vue`中的`DOM`异步更新策略和`nextTick`机制的解析，需要读者有一定的`Vue`使用经验并且熟悉掌握JavaScript事件循环模型。
 
 ### 引入：DOM的异步更新
 
