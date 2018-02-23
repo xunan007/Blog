@@ -2,7 +2,7 @@
 
 > 分享个人学习过程中总结的知识点，不定期更新，觉得写得不错的给个star呗 ~ 谢谢 ~
 
-1. [前端移动端适配总结](/issues/1)
+1. [前端移动端适配总结](https://github.com/Devinnn/Blog/issues/1)
 
 2. [前端跨域解决方案](https://github.com/Devinnn/Blog/issues/2)
 
