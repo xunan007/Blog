@@ -207,7 +207,7 @@ Window.window === Window; //true
 
 ### 判断
 
-**对于类数组对象，只要该对象中存在`length`属性并且`length`为非负整数切在有限范围之内即可判断为类数组对象。**
+**对于类数组对象，只要该对象中存在`length`属性并且`length`为非负整数且在有限范围之内即可判断为类数组对象。**
 
 JavaScript权威指南中提供了方法：
 ```javascript
