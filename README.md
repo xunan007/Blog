@@ -15,3 +15,5 @@
 6. [由setTimeout和setImmediate执行顺序的随机性窥探Node的事件循环机制](./issues/6)
 
 7. [【Vue源码】Vue中DOM的异步更新策略以及nextTick机制](./issues/7)
+
+8. [JavaScript类型判断](./issues/8)
