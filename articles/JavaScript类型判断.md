@@ -4,9 +4,9 @@
 
 ## typeof
 
-`typeof`只能用来判断基本类型，对于引用类型一律返回`object`。
+JavaScript定义的数据类型有`Undefined`、`Null`、`Boolean`、`Number`、`String`、`Object`、`Symbol`（ES6新增）。
 
-`ES6`前基本类型有六个`Null`、`Undefined`、`Boolean`、`Number`、`String`、`Object`。
+其中`typeof`对大部分的数据类型都能够准确识别，如下：
 
 ```javascript
 typeof undefined // "undefined"
@@ -15,13 +15,17 @@ typeof true // "boolean"
 typeof 1 // "number"
 typeof "s" // "string"
 typeof {} // "object"
+typeof Symbol // "function"
 ```
 
-注意`typeof null === 'object'`其实是一个`bug`。
-
-`typeof` 能够识别出`function`。
-
 其中返回的字符串首字母都是小写的。
+
+对于`typeof null === 'object'`来说，这其实是一个`bug`。
+
+在JavaScript中，`Object`下还有很多细分的类型，比如说`Date`、`RegExp`、`Error`、`Array`、`Function`。
+
+`typeof`除了能够准确的判断出`Function`之外，对于其他细分类型均返回`object`。
+
 
 ## Object.prototype.toString()
 
@@ -94,7 +98,7 @@ function type(obj) {
 
 注意IE6中`toString()`会把`Undefined`和`Null`都识别为`[object Object]`，所以加了一个判断，直接调用`+`来隐式`toString()-> "null"`。
 
-这里之所以`class2type[Object.prototype.toString.call(obj)] || "object"`是考虑到`ES6`新增的`Symbol`、`Map`、`Set`在集合中没有，直接把他们识别成`object`。
+这里之所以`class2type[Object.prototype.toString.call(obj)] || "object"`是考虑到`ES6`新增的`Symbol`、`Map`、`Set`在集合`class2type`中没有，直接把他们识别成`object`。
 
 **这个`type`其实就是`jQuery`中的`type`。**
 
