@@ -15,7 +15,8 @@ typeof true // "boolean"
 typeof 1 // "number"
 typeof "s" // "string"
 typeof {} // "object"
-typeof Symbol // "function"
+typeof function a() {} // "function"
+typeof Symbol('2') // "symbol"
 ```
 
 其中返回的字符串首字母都是小写的。
