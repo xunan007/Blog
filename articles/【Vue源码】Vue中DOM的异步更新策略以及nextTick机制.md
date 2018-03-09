@@ -214,9 +214,11 @@ export function queueWatcher (watcher: Watcher) {
   }
 }
 ```
-这里面的`nextTick(flushSchedulerQueue)`中的`flushSchedulerQueue`函数其实就是`watcher`的视图更新。每次调用的时候会把它`push`到`callbacks`中来异步执行。
+这里面的`nextTick(flushSchedulerQueue)`中的`flushSchedulerQueue`函数其实就是`watcher`的视图更新。调用的时候会把它`push`到`callbacks`中来异步执行。
 
 另外，关于`waiting`变量，这是很重要的一个标志位，它保证`flushSchedulerQueue`回调只允许被置入`callbacks`一次。
+
+也就是说，默认`waiting`变量为`false`，执行一次后`waiting`为`true`，后续的`this.xxx`不会再次触发`nextTick`的执行，而是把`this.xxx`相对应的`watcher`推入`flushSchedulerQueue`的`queue`队列中。
 
 **所以，也就是说`DOM`确实是异步更新，但是具体是在下一个`Tick`更新还是在当前`Tick`执行`microTask`的时候更新，具体要看`nextTcik`的实现方式，也就是具体跑的是`Promise/MutationObserver`还是`setTimeout`。**
 
