@@ -222,7 +222,7 @@ export function queueWatcher (watcher: Watcher) {
 
 附：[`nextTick`源码带注释]((https://github.com/answershuto/learnVue/blob/master/docs/Vue.js%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0DOM%E7%AD%96%E7%95%A5%E5%8F%8AnextTick.MarkDown#nexttick))，有兴趣可以观摩一下。
 
-这里面使用`Promise`和`setTimeout`来执行异步任务的方式都很好理解，比较巧妙的地方是利用`MutationObserver`执行异步任务。`MutationObserver`是`H5`的新特性，它能够监听指定范围内的`DOM`变化并执行其回调，它的回调会被当作`microTask`来执行，具体参考[`MDN`](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)，。
+这里面使用`Promise`和`setTimeout`来执行异步任务的方式都很好理解，比较巧妙的地方是利用`MutationObserver`执行异步任务。`MutationObserver`是`H5`的新特性，它能够监听指定范围内的`DOM`变化并执行其回调，它的回调会被当作`microTask`来执行，具体参考[`MDN`](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)。
 
 ```javascript
 var counter = 1
