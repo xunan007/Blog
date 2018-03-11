@@ -146,7 +146,7 @@ console.log(sub);
 
 优点是解决寄生组合存在的属性屏蔽问题。 
 
-注：
+注：  
 原型链继承 `Sub.prototype = new Super(); // (new Sub()).__proto__.__proto__ === Super.prototype`  
 原型继承 `Sub.prototype = Super.prototype; // (new Sub()).__proto__ === Super.prototype`
 ```javascript
