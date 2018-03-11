@@ -71,7 +71,6 @@ console.log(_sub.colors);
 function Super(name) {
     this.name = name;
     this.colors = ['red', 'blue', 'green'];
-    console.log(this);
 }
 
 Super.prototype.sayName = function() {
@@ -173,4 +172,4 @@ Sub.prototype.constructor = Sub;
 
 var sub = new Sub('sub');
 console.log(sub);
-```javascript
+```
