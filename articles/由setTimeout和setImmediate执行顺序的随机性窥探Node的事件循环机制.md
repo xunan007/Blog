@@ -235,7 +235,7 @@ setImmediate(function(){
 // 嵌套setImmediate
 ```
 
-解析：事件循环`check`阶段执行回调函数输出`setImmediate`，之后输出`nextTick`。嵌套的`setImmediate`在下一个事件循环的`check`阶段执行回调输出`嵌套的setImmediate`。
+解析：事件循环`check`阶段执行回调函数输出`setImmediate`，之后输出`nextTick`。嵌套的`setImmediate`在下一个事件循环的`check`阶段执行回调输出嵌套的`setImmediate`。
 
 代码2：
 
