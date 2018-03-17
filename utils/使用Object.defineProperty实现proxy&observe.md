@@ -46,12 +46,17 @@ proxy(options, target);
  */
 function observe(target) {
     // just object could run defineReactive function.
-    if (!target || typeof target !== 'object') {
-        return false;
+    if (!target || typeof target !== 'object') return false;
+    // judge if array
+    if (Array.isArray(target)) {
+        for (let i = 0; i < target.length; i++) {
+            observe(target[i]);
+        }
+    } else {
+        Object.keys(target).forEach(key => {
+            defineReactive(target, key, target[key]);
+        });
     }
-    Object.keys(target).forEach(key => {
-        defineReactive(target, key, target[key]);
-    });
 }
 function defineReactive(data, key, val) {
     observe(val);
@@ -69,7 +74,7 @@ var data = {
     a: 1,
     b: 2,
     c: {
-        wawa: 'juju'
+        wawa: [1, 2, 3, { haha: '234' }]
     }
 };
 observe(data);
