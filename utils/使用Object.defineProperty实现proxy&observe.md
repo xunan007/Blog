@@ -1,6 +1,6 @@
 ```javascript
 /**
- * 使用Object.defineProperty实现data proxy & data observe
+ * use Object.defineProperty to realize data proxy & data observe
  **/
 
 // data proxy
