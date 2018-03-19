@@ -98,4 +98,6 @@
 - 首部压缩
 - 服务器推送
 
-参考：https://www.zhihu.com/question/34074946
+参考：
+https://www.zhihu.com/question/34074946  
+https://segmentfault.com/q/1010000005167289
