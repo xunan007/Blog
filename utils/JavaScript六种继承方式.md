@@ -147,7 +147,7 @@ console.log(sub);
 
 注：  
 原型链继承 `Sub.prototype = new Super(); // (new Sub()).__proto__.__proto__ === Super.prototype`  
-原型继承 `Sub.prototype = Super.prototype; // (new Sub()).__proto__ === Super.prototype`
+原型继承 `Sub.prototype.__proto__ = Super.prototype; // (new Sub()).__proto__.__proto__ === Super.prototype`
 ```javascript
 function Super(name) {
     this.name = name;
@@ -164,7 +164,9 @@ function Sub(name) {
 }
 
 // 原型继承
-Sub.prototype = Super.prototype;
+function f() {}
+f.prototype = Super.prototype;
+Sub.prototype = new f();
 Sub.prototype.constructor = Sub;
 // 上面两句代码相当于
 // Sub.prototype = Object.create(Super.prototype);
