@@ -17,5 +17,3 @@
 7. [【Vue源码】Vue中DOM的异步更新策略以及nextTick机制](https://github.com/Devinnn/Blog/issues/7)
 
 8. [JavaScript类型判断](https://github.com/Devinnn/Blog/issues/8)
-
-9. [【科普】JavaScript浮点数精度问题](https://github.com/Devinnn/Blog/issues/9)
